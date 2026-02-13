@@ -1,0 +1,30 @@
+# SEAL (Enhanced) configuration for link prediction
+
+# Dataset settings
+dataset: Cora
+data_root: ./data
+
+# Model settings
+model: SEAL
+hidden_channels: 128
+out_channels: 64
+num_layers: 3
+dropout: 0.5
+use_attention: true
+
+# Training settings
+lr: 0.01
+weight_decay: 0.0005
+epochs: 300
+eval_every: 10
+patience: 30
+
+# Data split settings
+val_ratio: 0.1
+test_ratio: 0.2
+
+# Other settings
+seed: 42
+device: cuda
+save_model: true
+save_dir: checkpoints
